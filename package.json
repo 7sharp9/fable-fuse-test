@@ -11,13 +11,14 @@
   },
   "scripts": {
     "build": "fable ./src/test1.fsx",
-    "watch": "fable ./src/test1.fsx  -w --target watch"
+    "watch": "fable ./src/test1.fsx --target watch"
   },
   "devDependencies": {
+    "fable-compiler": "^0.7.42",
     "fable-core": "^0.7.26",
     "fable-fuse": "^0.0.2",
     "fable-powerpack": "^0.0.19",
     "source-map-loader": "^0.1.6",
-    "webpack": "^1.13.0"
+    "webpack": "^2.2.1"
   }
 }

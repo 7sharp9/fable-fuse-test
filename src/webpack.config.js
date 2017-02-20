@@ -1,13 +1,15 @@
 var path = require("path");
 var webpack = require("webpack");
 
-var cfg = {
+module.exports = {
   devtool: "source-map",
-  entry: "../App/js/src/test1.js",
+  entry: "./bin/src/test1.js",
   output: {
-    path: path.join(__dirname, "public"),
+    library: "commonjs",
+    path: path.join(__dirname, "../App/js"),
     filename: "bundle.js"
   },
+  externals: /^FuseJS/,
   module: {
     preLoaders: [
       {
@@ -18,5 +20,3 @@ var cfg = {
     ]
   }
 };
-
-module.exports = cfg;
