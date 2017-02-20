@@ -14,6 +14,7 @@
     "watch": "fable ./src/test1.fsx  -w --target watch"
   },
   "devDependencies": {
+    "fable-compiler": "^0.7.42",
     "fable-core": "^0.7.26",
     "fable-fuse": "^0.0.2",
     "fable-powerpack": "^0.0.19",
