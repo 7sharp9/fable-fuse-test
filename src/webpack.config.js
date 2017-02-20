@@ -11,12 +11,11 @@ module.exports = {
   },
   externals: /^FuseJS/,
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "source-map-loader"
-      }
-    ]
+    rules: [{
+      loader: "source-map-loader",
+      enforce: "pre",
+      test: /\.js$/,
+      exclude: /node_modules/
+    }]
   }
 };
