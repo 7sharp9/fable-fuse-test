@@ -9,7 +9,14 @@ module.exports = {
     path: path.join(__dirname, "../App/js"),
     filename: "bundle.js"
   },
-  externals: /^FuseJS/,
+  externals: [
+    function(context, request, callback) {
+      if (/^FuseJS/.test(request)){
+        return callback(null, 'commonjs ' + request);
+      }
+      callback();
+    }
+  ],
   module: {
     rules: [{
       loader: "source-map-loader",
